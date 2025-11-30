@@ -8,7 +8,6 @@ const app = $id('app');
 function appContainer() {
     return (
         `
-         <h1>Chrome Text</h1>
         `
     )
 }
