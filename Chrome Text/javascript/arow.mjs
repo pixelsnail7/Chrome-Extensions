@@ -60,23 +60,20 @@ export function useState(initialState = null) {
 // USE_MEMORY
 //
 export function useMemory(key) {
-  // Initialize key value in local storage
+  // Initialize if missing
   if (!localStorage.getItem(key)) {
-    localStorage.setItem(key, 0);
+    localStorage.setItem(key, "0"); // or "0", up to you
   }
-  // Setter
-  function setter(vlaue) {
-    if (localStorage.getItem(key) && vlaue) {
-      localStorage.setItem(key, vlaue);
-      return localStorage.getItem(key);
-    }
+
+  function setter(value) {
+    localStorage.setItem(key, value);
+    return value;
   }
-  // Getter
-  function getter(key) {
-    if (localStorage.getItem(key)) {
-      return localStorage.getItem(key);
-    }
-    return null;
+
+  function getter() {
+    return localStorage.getItem(key);
   }
+
   return [getter, setter];
 }
+

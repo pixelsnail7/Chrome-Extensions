@@ -1,5 +1,4 @@
-# Chapter One > Frontend
-## Step One 
+# Step One 
 1. Creating a HTML file named `index.html` for frontend and CSS file to styles folder named `style.css` for styling.
 2. Add a new css file named `root.css` and import it in `style.css` file for better way to styling. 
 **`root.css` File Like This :**
@@ -47,3 +46,51 @@ const appRender = () => app.innerHTML = appContainer();
 // Initial Render 
 appRender();
 ```
+
+8. Add Zoom component to app.
+```js
+export function zoom() {
+  return `
+    <div id="zoomBtns" class="tools">
+      <button id="zoomInBtn"><i class="fa-solid fa-plus"></i></button>
+      <button id="zoomOutBtn"><i class="fa-solid fa-minus"></i></button>
+    </div>
+  `;
+}
+```
+
+```js
+// App Container Function
+function appContainer() {
+    return (
+        `
+        <div id="toolbar" class="toolbar">
+            ${zoom()}
+            <div>
+                <button class="icon"><i class="fa-solid fa-file-export"></i></button>
+                <button class="icon"><i class="fa-solid fa-file-import"></i></button>
+            </div>
+        </div>
+        <div id="sheet" contenteditable="true"></div>
+        <div id="bottomToolbar" class="toolbar">
+            <div id="pagesBtns">${pagesBtns()}</div>
+        </div>
+        `
+    )
+}
+```
+
+9. Add Pages Btns.
+```js
+function pagesBtns() {
+    let pages_btns = '';
+    for (let i = 0; i < 9; i++) {
+        pages_btns += `<button class="pageBtn" class="icon">${i + 1}</button>`
+    }
+    return pages_btns
+}
+```
+
+10. Add Demo export and import buttons.
+
+# Step Two
