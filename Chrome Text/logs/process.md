@@ -31,7 +31,7 @@ import { $id } from "./arow.mjs";
 const app = $id('app');
 ```
 
-7. Create a 
+7. Create a container function that help to display our app in app element with a app Render function.
 ```js
 // App Container Function
 function appContainer() {
