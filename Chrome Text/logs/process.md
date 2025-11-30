@@ -9,15 +9,16 @@
     --xs: 0.5rem;
     --s: 0.75rem;
     --m: 1rem;
+    --x: 1.25rem;
     --l: 1.5rem;
     --xl: 2rem;
     --xxl: 3rem;
     --dark-body-bg: #202020;
     --dark-body-fg: #fffafa;
-    --prime: #FF3838;
+    --prime: #A1C349;
     --prime0: #73AF6F;
     --prime1: #4169e1;
-    --border-c: lightgray;
+    --border-c: gray;
 }
 ```
 3. Add app element to `index.html` and add script tag (`app.js`).

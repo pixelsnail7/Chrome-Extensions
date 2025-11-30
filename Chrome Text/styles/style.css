@@ -10,8 +10,94 @@
 
 body {
     display: flex;
+    align-items: center;
     justify-content: center;
     height: 100vh;
     background-color: var(--dark-body-bg);
     color: var(--dark-body-fg);
+}
+
+#app {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 26rem;
+    width: 32rem;
+    outline: 1px solid var(--border-c);
+}
+
+.toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--xl);
+    height: 3rem;
+    width: 100%;
+    padding: 0.5rem;
+    color: var(--border-c);
+}
+
+.toolbar button {
+    border: none;
+    background-color: transparent;
+    font-size: var(--l);
+    color: var(--border-c);
+}
+
+#sheet {
+    height: 20rem;
+    width: 31rem;
+    overflow: auto;
+    padding: var(--xs);
+    background-color: var(--box-bg);
+}
+
+#sheet:focus {
+    outline: none;
+    outline: 1px solid var(--prime);
+}
+
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--prime);
+}
+
+/* Icon */
+.icon {
+    color: gray !important;
+}
+
+/* ------------------------------- */
+#zoomBtns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--s);
+    height: 100%;
+}
+
+#zoomBtns button {
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--box-bg);
+    color: gray;
+}
+
+/* ----------------------------- */
+.pageBtn {
+    height: 2rem;
+    aspect-ratio: 1/1;
+    border-radius: 0.5rem;
+    background-color: #252525 !important;
+    color: gray !important;
+}
+
+#pagesBtns {
+    display: flex;
+    gap: 0.5rem;
+    border-radius: 0.5rem;
 }

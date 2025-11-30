@@ -8,8 +8,18 @@
     --xxl: 3rem;
     --dark-body-bg: #202020;
     --dark-body-fg: #fffafa;
-    --prime: #FF3838;
+    --prime: #0D9479;
     --prime0: #73AF6F;
     --prime1: #4169e1;
     --border-c: lightgray;
+    --box-bg: #252525;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.90);
+    transition: all 0.2s ease-in-out;
 }
