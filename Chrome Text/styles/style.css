@@ -67,11 +67,6 @@ body {
     background-color: var(--prime);
 }
 
-/* Icon */
-.icon {
-    color: gray !important;
-}
-
 /* ------------------------------- */
 #zoomBtns {
     display: flex;
@@ -85,7 +80,6 @@ body {
     border: none;
     border-radius: 0.5rem;
     background-color: var(--box-bg);
-    color: gray;
 }
 
 /* ----------------------------- */
@@ -117,4 +111,18 @@ body {
     border-radius: var(--xs);
     padding: var(--m);
     background-color: var(--prime);
+}
+
+/* -------------------------------- */
+/* Icon */
+.icon {
+    color: gray !important;
+}
+
+.icon:hover {
+    color: var(--prime0) !important;
+}
+
+.activeIcon {
+    outline: 2px solid var(--prime0) !important;
 }

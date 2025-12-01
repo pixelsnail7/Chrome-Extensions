@@ -10,7 +10,7 @@ const app = $id('app');
 function pagesBtns() {
     let pages_btns = '';
     for (let i = 0; i < 9; i++) {
-        pages_btns += `<button class="pageBtn" class="icon">${i + 1}</button>`
+        pages_btns += `<button class="pageBtn icon">${i + 1}</button>`
     }
     return pages_btns
 }
@@ -113,3 +113,17 @@ sheet.addEventListener('input', () => {
     newData[getCurrentPage()] = sheet.textContent;
     setData(JSON.stringify(newData));
 })
+
+// Add and Remove Active Class
+pageBtns.forEach((pageBtn, index) => {
+
+    // Add active class
+    if (index == getCurrentPage()) {
+        pageBtn.classList.add('activeIcon');
+    }
+
+    pageBtn.addEventListener('click', () => {
+        pageBtns.forEach(pageBtn => pageBtn.classList.remove('activeIcon'));
+        pageBtn.classList.add('activeIcon');
+    })
+});
